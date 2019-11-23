@@ -24,8 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [u'ImmigrationQuiz.pythonanywhere.com']
 
+SECRET_KEY = 'cln_%#9$6cqev%&vp^dsg(ttz(a3efyetgrdkwm7l!&-h78xy3'
 
 # Application definition
 
