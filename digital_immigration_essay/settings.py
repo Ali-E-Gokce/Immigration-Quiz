@@ -82,12 +82,7 @@ DATABASES = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ImmigrationQuiz@ImmigrationQuiz',
-        'USER': 'ImmigrationQuiz',
-        'PASSWORD': '3fR@9@BQ7tR3LYP',
-        'HOST': 'ImmigrationQuiz.mysql.pythonanywhere-services.com',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        "this is secret"
     }
 }
 
