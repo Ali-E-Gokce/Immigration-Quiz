@@ -83,7 +83,11 @@ DATABASES = {
 
 DATABASES = {
     'default': {
-        "this is secret"
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ImmigrationQuiz$ImmigrationQuiz',
+        'USER': 'ImmigrationQuiz',
+        'PASSWORD': '3fR@9@BQ7tR3LYP',
+        'HOST': 'ImmigrationQuiz.mysql.pythonanywhere-services.com',
     }
 }
 
