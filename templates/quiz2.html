@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz your Immigration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'quiz.css' %}">
+  </head>
+  <body>
+    <a href="{% url 'mainPage' %}">
+    <h1>Quiz on Immigration Facts</h1>
+    </a>
+    <div class="quizContainer">
+    <div id="quiz"></div>
+    <button id="previous">Previous Question</button>
+    <button id="next">Next Question</button>
+    <button  id="submit" name="submit" display="None">Submit Quiz</button>
+    </div>
+    <div id="results"></div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{% static 'quiz2.js' %}"></script>
+  </body>
+</html>

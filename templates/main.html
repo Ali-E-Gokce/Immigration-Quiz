@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz your Immigration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'mainPage.css' %}">
+  </head>
+  <body>
+    <a href="{% url 'mainPage' %}">
+    <h1>Quiz on Immigration Facts</h1>
+    </a>
+    <p>Test your knowledge on Immigration and learn about real data around the world!</p>
+      <a href="quiz1.html">
+      <div class="quizSelection">
+          <h3>Quiz 1</h3>
+        <div class="image">
+          <img src="https://www.pewresearch.org/wp-content/uploads/2019/06/FT_19.06.03_KeyFindingsImmigrants_20metropolitanareas.png" alt="An image of a political map of the united states with circles of different sizes showing the respective rate of immigration to each place.">
+        </div>
+      <div class="quizTitleBox">
+      <span class="quizTitle">This quiz is about Immigration to the US</span>
+      </div>
+      </div>
+      </a>
+      <a href="quiz2.html">
+      <div class="quizSelection">
+          <h3>Quiz 2</h3>
+        <div class="image">
+          <img src="https://abrilsuperinteressante.files.wordpress.com/2018/11/mapa-lindo.png?quality=70&strip=info&resize=680,453" alt="">
+        </div>
+      <div class="quizTitleBox">
+      <span class="quizTitle">This quiz is about Immigration related to the EU and the AU</span>
+      </div>
+        </div>
+      </a>
+      <!-- </div> -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" alt="an image of an old world map"></script>
+  </body>
+</html>
