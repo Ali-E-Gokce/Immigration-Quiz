@@ -90,7 +90,7 @@
       answers: {
         a: "To encourage the development of Africa economically, technologically, and infrastructurally",
         b: "To promote the liberation/sovereignty of Africa and eradicate colonization",
-        c: "To create one unified government system titled “the United States of Africa",
+        c: "To create one unified government system titled 'the United States of Africa'",
         d: "All of the above"
       },
       correctAnswer: "d"
@@ -190,10 +190,11 @@
            </div>`
         );
         let currentAnswer = myAnswers[questionNumber];
+        console.log(currentAnswer["answer"]);
         output.push(
           `<div class="slide">
           <span class="correctOrNot"></span>
-          <div class="answer"
+          <div class="answer">
           The right answer is: ${currentAnswer["rightChoice"]})
           ${currentAnswer["answer"]} </br> </br>
           ${currentAnswer["explanation"]}
@@ -238,9 +239,9 @@
       let resultsHtml = `
       <div class=results>
         <h2>
-        	Your Score is:
-        	<br>
-        	<span class=score>${score}%</span>
+                Your Score is:
+                <br>
+                <span class=score>${score}%</span>
         </h2>
         <div class=comperativePoliticalAffiliation>
         <p>You did better than ${worseRight}% of right-leaning quiz takers</p>
@@ -288,13 +289,13 @@
               radios[i].onclick = function(){nextButton.style.display = "inline-block"};
           }
       }
-      if (currentSlide === 0) {
-        previousButton.style.display = "none";
-        }
+//      if (currentSlide === 0) {
+//        previousButton.style.display = "none";
+//        }
 
-      else {
-        previousButton.style.display = "inline-block";
-        }
+//    else {
+//        previousButton.style.display = "inline-block";
+//        }
 
       if (currentSlide === slides.length - 1) {
         nextButton.style.display = "none";
@@ -312,22 +313,18 @@
     function showPreviousSlide() {
       showSlide(currentSlide - 1);
     }
-
+        output.push(
     const quizContainer = document.getElementById("quiz");
     const resultsContainer = document.getElementById("results");
     const submitButton = document.getElementById("submit");
-
     // display quiz right away
     buildQuiz();
-
-    const previousButton = document.getElementById("previous");
+//    const previousButton = document.getElementById("previous");
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
     showSlide(0);
-
-
-    previousButton.addEventListener("click", showPreviousSlide);
+//    previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
     //return number or right answers to the backend to get results
     $(document).ready(function(){
@@ -350,5 +347,4 @@
             });
           });
         });
-
   })();
