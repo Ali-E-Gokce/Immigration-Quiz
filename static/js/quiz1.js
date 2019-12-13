@@ -1,5 +1,4 @@
-(function() {
-  const myQuestions =  [
+const myQuestions =  [
     {
       question: "How many refugees do you think the United States will be admitting by 2020?",
       answers: {
@@ -20,7 +19,8 @@
         d: "15,000"
       },
       correctAnswer: "a",
-      explanation: "Since 1975, the United States has vetted and resettled more than 3 million refugees. These former refugees and their children are now coworkers, classmates and family members. One view to this number is: The administration’s announced intention to abandon refugees comes despite the worst refugee crisis in history, with more than 25 million refugees worldwide—more than half of whom are children—who are in need of safety and 1.4 million in need of resettlement globally."
+      explanation: "Since 1975, the United States has vetted and resettled more than 3 million refugees. These former refugees and their children are now co
+workers, classmates and family members. One view to this number is: The administration’s announced intention to abandon refugees comes despite the worst refugee crisis in history, with more than 25 million refugees worldwide—more than half of whom are children—who are in need of safety and 1.4 million in need of resettlement globally."
     },
     {
       question: "What country do you think led in having refugees coming into the United States in 2019?",
@@ -168,6 +168,7 @@
   ];
 
 
+
 function buildQuiz() {
     // we'll need a place to store the HTML output
     const output = [];
@@ -207,8 +208,6 @@ function buildQuiz() {
            <div class="choices"> ${choices.join("")} </div>
          </div>`
       );
-      // console.log(currentAnswer)
-
       output.push(
         `<div class="slide">
         <span class="correctOrNot"></span>
@@ -219,6 +218,7 @@ function buildQuiz() {
         </div>
         `
       );
+      //${currentAnswer["explanation"]}
     });
     // finally combine our output list into one string of HTML and put it on the page
     quizContainer.innerHTML = output.join("");
@@ -251,15 +251,14 @@ function showResults(score, worseRight, worseLeft){
     let resultsHtml = `
     <div class=results>
       <h2>
-      	Your Score is:
-      	<br>
-      	<span class=score>${score}%</span>
+        Your Score is:
+        <br>
+        <span class=score>${score}%</span>
       </h2>
       <div class=comperativePoliticalAffiliation>
       <p>You did better than ${worseRight}% of right-leaning quiz takers</p>
       <p>You did better than ${worseLeft}% of left-leaning quiz-takers</p>
       </div>
-
       </div>
     `
     // insert into the empty div once essay is ready
@@ -363,5 +362,4 @@ function showSlide(n) {
           });
         });
       });
-
 })();
